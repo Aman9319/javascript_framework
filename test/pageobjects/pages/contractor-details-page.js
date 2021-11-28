@@ -15,6 +15,7 @@ const SELECTOR = {
     country: '//label[text()="Country"]/preceding-sibling::input',
     ssnNumber: '//label[text()="SSN*"]/preceding-sibling::input',
     contractorButton: '//span[text()="Add Contractor"]',
+    contractorList: '//table/child::tbody/child::tr/child::td/following-sibling::td[2]',
 }
 
 class ContractorDetailPage {
@@ -64,6 +65,10 @@ class ContractorDetailPage {
        browser.pause(3000);
        this.contractorButton.waitForDisplayed();
        this.contractorButton.click();
+    }
+
+    getTheContractorName() {
+        return this.contractorList.getText();
     }
 }
 

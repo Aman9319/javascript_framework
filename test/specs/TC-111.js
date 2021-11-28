@@ -1,4 +1,4 @@
-// const { assert } = require('chai')
+const { assert } = require('chai');
 const basePage = require('../pageobjects/pages/base-page');
 const testData = require('../pageobjects/lib/url');
 const addContractor = require('../pageobjects/pages/add-contractor-page');
@@ -21,5 +21,10 @@ describe('webdriver.io page', () => {
         selectContractor.clickOnMultipleContractor();
         addContractor.clickOnAddIndivisual();
         contractorDetail.enterTheContractorDetails(testdata.constractr1);
+        browser.pause(15000);
+        // const actualname = contractorDetail.contractorList.getText();
+        const actualName = contractorDetail.getTheContractorName();
+        console.log('actualname==', actualName)
+        assert.equal(actualName, testdata.constractr1.emailId, 'Contractor did mot match');
     })
 })

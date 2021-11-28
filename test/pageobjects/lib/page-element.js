@@ -26,6 +26,10 @@ class PageElement {
    scrollIntoView() {
       return $(this.selector).scrollIntoView();
    }
+
+   getText() {
+      return $(this.selector).getText();
+   }
 }
 
 
