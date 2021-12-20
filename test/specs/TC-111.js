@@ -13,7 +13,7 @@ const testdata = require('../pageobjects/lib/contractor-test-data');
 describe('webdriver.io page', () => {
     it('should have the right title', () => {
         browser.url(testData.url);
-        browser.pause(6000);
+        // browser.pause(6000);
         basePage.enterUserName(testData.testData.userName);
         basePage.enterPassword(testData.testData.passWord);
         basePage.clickOnLogInButton();
@@ -21,10 +21,10 @@ describe('webdriver.io page', () => {
         selectContractor.clickOnMultipleContractor();
         addContractor.clickOnAddIndivisual();
         contractorDetail.enterTheContractorDetails(testdata.constractr1);
-        browser.pause(15000);
+        // browser.pause(15000);
         // const actualname = contractorDetail.contractorList.getText();
-        const actualName = contractorDetail.getTheContractorName();
-        console.log('actualname==', actualName)
-        assert.equal(actualName, testdata.constractr1.emailId, 'Contractor did mot match');
+        const actualEmail = contractorDetail.getTheContractorEmail();
+        // console.log('actualname==', actualName)
+        assert.equal(actualEmail, testdata.constractr1.emailId, 'Contractor did mot match');
     })
 })

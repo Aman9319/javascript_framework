@@ -11,7 +11,7 @@ class ContractorPage {
     }
 
     clickOnMultipleContractor() {
-        browser.pause(6000);
+        // browser.pause(6000);
        this.multipleContractor.waitForDisplayed();
        this.multipleContractor.click();
     }

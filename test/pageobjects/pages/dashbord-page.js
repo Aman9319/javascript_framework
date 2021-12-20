@@ -11,7 +11,7 @@ class DashbordPage {
     }
    
     clickOnboardArrow() {
-        browser.pause(6000);
+        // browser.pause(6000);
         // this.onBoard.waitForDisplayed();
         this.onBoard.click();
     }

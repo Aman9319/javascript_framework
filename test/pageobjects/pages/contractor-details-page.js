@@ -25,7 +25,7 @@ class ContractorDetailPage {
 
     }
 
-    scrollByAmount(x, y){
+    scrollByAmount(x, y)   {
         return browser.execute((xcoordinate,ycoordinate) => window.scrollBy(xcoordinate,ycoordinate),x,y);
     }
 
@@ -59,15 +59,15 @@ class ContractorDetailPage {
     //    browser.pause(3000);
     //    this.country.waitForDisplayed();
     //    this.country.setValue(data.country);
-       browser.pause(3000);
+    //    browser.pause(3000);
        this.ssnNumber.waitForDisplayed();
        this.ssnNumber.setValue(data.ssnNumber);
-       browser.pause(3000);
+    //    browser.pause(3000);
        this.contractorButton.waitForDisplayed();
        this.contractorButton.click();
     }
 
-    getTheContractorName() {
+    getTheContractorEmail() {
         return this.contractorList.getText();
     }
 }

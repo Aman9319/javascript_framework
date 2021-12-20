@@ -11,7 +11,7 @@ class AddContractorPage {
     }
 
     clickOnAddIndivisual() {
-        browser.pause(6000);
+        // browser.pause(6000);
        this.addIndividual.waitForDisplayed();
        this.addIndividual.click();
     }

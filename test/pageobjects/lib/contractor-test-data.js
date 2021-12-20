@@ -4,7 +4,7 @@ module.exports= {
         lastName: 'ab',
         businessName: 'Ecommerce',
         designation: 'tester',
-        emailId: 'man@gmail.com',
+        emailId: 'yutyutyu@gmail.com',
         phoneNumber: '8882345675',
         address1: 'test1',
         address2: 'test2',
@@ -12,6 +12,6 @@ module.exports= {
         city: 'Allahabad',
         state:'Uttar Pradesh',
         country: 'India',
-        ssnNumber: '877363653',
+        ssnNumber: '857363653',
     }
 }

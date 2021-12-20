@@ -9,9 +9,9 @@ const PageElement = require('./page-element');
 
 
 function installGetters(selectorObject) {
-    console.log('selectorObject=====', selectorObject);
+    // console.log('selectorObject=====', selectorObject);
     for (const key of Object.keys(selectorObject)){
-        console.log('key====',key);
+        // console.log('key====',key);
         // if(selectorObject[key] instanceof Object) {
         //     console.log('key------Inside',key);
         //     console.log('this--inside--',this);
@@ -23,7 +23,7 @@ function installGetters(selectorObject) {
         //         },
         //     });
         // } else {
-            console.log('this--else--',this);
+            // console.log('this--else--',this);
             Object.defineProperty(this, key, {
                 get () {
                     return new PageElement(selectorObject[key])
